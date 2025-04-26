@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy the current directory contents into the container
 COPY . /app
 
-# Install the required Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies manually (e.g., Flask, transformers)
+RUN pip install Flask==2.2.3 transformers==4.29.0 torch==2.0.0
 
 # Expose the port the app runs on
 EXPOSE 5000
